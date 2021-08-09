@@ -13,10 +13,11 @@ docker build -t jupyterlab:latest .
 docker run --rm \
            -p 8888:8888 \
            -e GRANT_SUDO=yes \
+           -e NB_USER=$USER \
            --user root \
            -e JUPYTER_ENABLE_LAB=yes \
            --name jupyterlab \
-           -v $PWD:/workdir \
+           -v $PWD/notebook:/workdir \
            jupyterlab:latest \
            start.sh jupyter lab
 ```
@@ -25,10 +26,11 @@ docker run --rm \
 docker run --rm \
            -p 8888:8888 \
            -e GRANT_SUDO=yes \
+           -e NB_USER=$USER \
            --user root \
            -e JUPYTER_ENABLE_LAB=yes \
            --name jupyterlab \
-           -v $PWD:/workdir \
+           -v $PWD/notebook:/workdir \
            jupyterlab:latest \
            start.sh jupyter lab \
            --NotebookApp.token=''
