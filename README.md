@@ -1,6 +1,6 @@
 # Quantum ESPRESSO(ESM/ESM-RISM)を用いた表面・界面シミュレーションのチュートリアル
 
-**学部2年生用のセミナー資料です。第一原理計算全般の知識・技術習得を目的としておりません。**
+**学部2年生用のセミナー資料です。第一原理計算全般の知識・技術習得を目的としておりません。このDocker imageは[Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/)のjupyter/scipy-notebookをベースにしております。まずは[こちら](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html)をご覧になり、各コマンドや環境変数をご確認下さい。**
 
 ### Dockerイメージを手元で作成する
 ```bash
