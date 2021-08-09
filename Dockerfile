@@ -12,9 +12,10 @@ RUN apt-get install -y -q --no-install-recommends \
     curl \
     make \
     cmake \
-    nodejs \
     povray \
     povray-includes \
+    && curl -sL https://deb.nodesource.com/setup_14.x |bash - \
+    && apt-get install -y nodejs \
     && apt-get autoremove -y \
     && apt-get clean \
     && rm -rf \
@@ -33,7 +34,6 @@ RUN pip install --upgrade pip \
     && rm -rf ~/.cache/pip
 
 # install jupyterlab extentions
-RUN jupyter labextension install @axlair/jupyterlab_vim \
-    && jupyter labextension disable @axlair/jupyterlab_vim
+RUN jupyter labextension install @axlair/jupyterlab_vim
 
 WORKDIR /workdir
