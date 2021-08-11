@@ -8,7 +8,7 @@ RUN apt-get update -y \
 RUN apt-get install -y -q --no-install-recommends \
     gcc \
     gfortran \
-    libfftw3-3 libfftw3-dev libfftw3-doc \
+    libfftw3-3 libfftw3-bin libfftw3-dev libfftw3-doc \
     liblapack-dev \
     libblas-dev \
     openmpi-bin \
