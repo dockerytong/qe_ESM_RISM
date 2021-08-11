@@ -1,4 +1,5 @@
 notebook/.ipynb_checkpoints/*
-notebook/node_modules/*
+notebook/node_modules
 notebook/yarn.lock
+notebook/q-e
 
