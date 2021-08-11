@@ -6,6 +6,16 @@ RUN apt-get update -y \
     && apt-get upgrade -y
 
 RUN apt-get install -y -q --no-install-recommends \
+    gcc \
+    gfortran \
+    libfftw3-3 libfftw3-dev libfftw3-doc \
+    liblapack-dev \
+    libblas-dev \
+    openmpi-bin \
+    openmpi-common \
+    openssh-server \
+    openssh-client \
+    libopenmpi-dev \
     wget \
     git \
     vim \
