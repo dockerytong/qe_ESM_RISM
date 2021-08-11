@@ -28,7 +28,7 @@ RUN apt-get install -y -q --no-install-recommends \
 RUN pip install --upgrade pip \
     && pip install --upgrade jupyterlab \
     && pip install --no-cache-dir \
-    ase \
+    git+https://github.com/minoru-otani/ase.git@qe_rism \
     nglview \
     ipywidgets \
     && rm -rf ~/.cache/pip
