@@ -33,6 +33,7 @@ RUN apt-get install -y -q --no-install-recommends \
        /var/cache/apt/* \
        /usr/local/src/* \
        /tmp/*
+USER $NB_UID
 
 # install python library
 RUN pip install --upgrade pip \
@@ -45,5 +46,8 @@ RUN pip install --upgrade pip \
 
 # install jupyterlab extentions
 RUN jupyter labextension install @axlair/jupyterlab_vim
+
+# fix permissions
+RUN fix-permissions /home/$NB_USER
 
 WORKDIR /workdir
