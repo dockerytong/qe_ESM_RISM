@@ -1,6 +1,6 @@
 # Quantum ESPRESSO(ESM/ESM-RISM)を用いた表面・界面シミュレーションのチュートリアル
 
-**学部2年生用のセミナー資料です。第一原理計算全般の知識・技術習得を目的としておりません。このDocker imageは[Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/)のjupyter/scipy-notebookをベースにしております。まずは[こちら](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html)をご覧になり、各コマンドや環境変数をご確認下さい。**
+**チュートリアル用の資料です。第一原理計算全般の知識・技術習得を目的としておりません。このDocker imageは[Jupyter Docker Stacks](https://jupyter-docker-stacks.readthedocs.io/)のjupyter/scipy-notebookをベースにしております。まずは[こちら](https://jupyter-docker-stacks.readthedocs.io/en/latest/using/common.html)をご覧になり、各コマンドや環境変数をご確認下さい。**
 
 ## 準備
 ### Dockerイメージを手元で作成する
@@ -52,7 +52,7 @@ docker exec -it jupyterlab start.sh
 |2-1 |ASEの使い方 |[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/02ASE.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/02ASE.ipynb)|
 
 ### 第3章 Google ColaboratoryでESM計算をやってみる
-Google Colaboratoryを使ってQuantum ESPRESSO(QE)が使えることは、[Yuki Nagaiさんのページ](https://cometscome.github.io/DFT/build/)を見て知りました。QEのコンパイル方法は[このページ](https://cometscome.github.io/DFT/build/Fast/fast/#Google-Colaboratoryを使って第一原理計算)を参考にしています。Google Colaboratoryを使っても、ローカルにjupyterlabを立ち上げてもどちらでもプログラムを実施することができます。
+[Yuki Nagaiさんのページ](https://cometscome.github.io/DFT/build/)を参考にGoogle Colaboratoryを使ってQuantum ESPRESSO(QE)が使ってみます。QEのコンパイル方法は[このページ](https://cometscome.github.io/DFT/build/Fast/fast/#Google-Colaboratoryを使って第一原理計算)を参考にしています。Google Colaboratoryを使っても、ローカルにjupyterlabを立ち上げてもどちらでもプログラムを実施することができます。
 | |タイトル |nbviewer|Open in Colab |
 |---|---|---|---|
 |3-1 |Quantum ESPRESSOを用意する |[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03colab_qe.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03colab_qe.ipynb)|
