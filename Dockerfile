@@ -8,14 +8,15 @@ RUN apt-get update -y \
 RUN apt-get install -y -q --no-install-recommends \
     gcc \
     gfortran \
-    libfftw3-3 libfftw3-bin libfftw3-dev libfftw3-doc \
     liblapack-dev \
     libblas-dev \
+    mpi \
     openmpi-bin \
     openmpi-common \
     openssh-server \
     openssh-client \
     libopenmpi-dev \
+    libfftw3-3 libfftw3-bin libfftw3-dev libfftw3-doc \
     wget \
     git \
     vim \
@@ -24,6 +25,7 @@ RUN apt-get install -y -q --no-install-recommends \
     cmake \
     povray \
     povray-includes \
+    texlive-extra-utils \
     && curl -sL https://deb.nodesource.com/setup_14.x |bash - \
     && apt-get install -y nodejs \
     && apt-get autoremove -y \
@@ -33,15 +35,15 @@ RUN apt-get install -y -q --no-install-recommends \
        /var/cache/apt/* \
        /usr/local/src/* \
        /tmp/*
-USER $NB_UID
 
 # install python library
 RUN pip install --upgrade pip \
     && pip install --upgrade jupyterlab \
     && pip install --no-cache-dir \
-    ase \
     nglview \
     ipywidgets \
+#    ase \
+    && pip install git+https://gitlab.com/minoru-otani/ase.git@qe_rism \
     && rm -rf ~/.cache/pip
 
 # install jupyterlab extentions
@@ -50,4 +52,5 @@ RUN jupyter labextension install @axlair/jupyterlab_vim
 # fix permissions
 RUN fix-permissions /home/$NB_USER
 
-WORKDIR /workdir
+WORKDIR $HOME
+USER $NB_UID
