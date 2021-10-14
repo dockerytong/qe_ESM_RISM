@@ -43,12 +43,14 @@ RUN pip install --upgrade pip \
     && pip install --no-cache-dir \
     nglview \
     ipywidgets \
+    requests \
+    jupyterlab_vim \
 #    ase \
     && pip install git+https://gitlab.com/minoru-otani/ase.git@qe_rism \
     && rm -rf ~/.cache/pip
 
 # install jupyterlab extentions
-RUN jupyter labextension install @axlair/jupyterlab_vim
+#RUN jupyter labextension install @axlair/jupyterlab_vim
 
 # copy files
 WORKDIR $HOME/notebook
