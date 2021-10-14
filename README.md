@@ -79,11 +79,28 @@ docker exec -it jupyterlab start.sh
 ### 第3章 Jupyterlab上で[ASE](https://wiki.fysik.dtu.dk/ase/)を使ってみる
 | |タイトル |nbviewer|Open in Colab |
 |---|---|---|---|
-|3-1 |金属表面、分子吸着モデル) |[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_1ASE.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_1ASE.ipynb)|
+|3-1 |金属表面、分子吸着モデル |[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_1ASE.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_1ASE.ipynb)|
 |3-2 |グラファイト、グラフェン|[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_2ASE.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/03_2ASE.ipynb)|
 
-### 第4章 Google ColaboratoryでESM計算をやってみる
-[Yuki Nagaiさんのページ](https://cometscome.github.io/DFT/build/)を参考にGoogle Colaboratoryを使ってQuantum ESPRESSO(QE)が使ってみます。QEのコンパイル方法は[このページ](https://cometscome.github.io/DFT/build/Fast/fast/#Google-Colaboratoryを使って第一原理計算)を参考にしています。Google Colaboratoryを使っても、ローカルにjupyterlabを立ち上げてもどちらでもプログラムを実施することができます。
+### 第4章 Google Colaboratory上でQuantum ESPRESSOを動かす準備をする。
+ここでは、Google Colaboratory上でQuantum ESPRESSO(QE)をコンパイルして計算の準備をします。Google Colaboratory上のQuantum ESPRESSO(QE)に関しては[Yuki Nagaiさんのページ](https://cometscome.github.io/DFT/build/)を参考にしています。QEのコンパイル方法は[このページ](https://cometscome.github.io/DFT/build/Fast/fast/#Google-Colaboratoryを使って第一原理計算)を参考にしています。
 | |タイトル |nbviewer|Open in Colab |
 |---|---|---|---|
 |4-1 |Quantum ESPRESSOを用意する |[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/04_1colab_qe.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/04_1colab_qe.ipynb)|
+
+### 第5章 ESM計算をやってみる
+ここでは、ESM法を使って様々な計算を行います。Google Colaboratoryを使う場合は計算負荷軽減のために、平面波のカットオフなどを下げた計算となっていますので、計算結果の理解には注意が必要です。正しい結果を得るためには、ローカルにjupyterlabを立ち上げて十分な精度が確保できるカットオフなどを使って計算して下さい。
+| |タイトル |nbviewer|Open in Colab |
+|---|---|---|---|
+|5-1 |ESM_exampleの計算を実行する|[![nbviewer](https://camo.githubusercontent.com/bfeb5472ee3df9b7c63ea3b260dc0c679be90b97/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f72656e6465722d6e627669657765722d6f72616e67652e7376673f636f6c6f72423d66333736323626636f6c6f72413d346434643464)](https://nbviewer.jupyter.org/github/minoru-otani/qe_devenv_JP/blob/main/notebook/05_1colab_qe.ipynb) |[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/minoru-otani/qe_devenv_JP/blob/main/notebook/05_1colab_qe.ipynb)|
+|5-2 |Graphieスラブの計算を実行する|||
+
+### 第6章 ESM-RISM計算をやってみる
+| |タイトル |nbviewer|Open in Colab |
+|---|---|---|---|
+|6-1|RISM_exampleの計算を実行する|||
+|6-2|1D-RISM計算に慣れる|||
+|6-3|3D-RISM計算に慣れる|||
+|6-3|ESM-RISM計算に慣れる|||
+
+
