@@ -42,7 +42,6 @@ docker run --rm \
            --user root \
            -e JUPYTER_ENABLE_LAB=yes \
            --name jupyterlab \
-           -v $PWD/notebook:/workdir \
            jupyterlab:latest \
            start.sh jupyter lab
 ```
@@ -55,7 +54,6 @@ docker run --rm \
            --user root \
            -e JUPYTER_ENABLE_LAB=yes \
            --name jupyterlab \
-           -v $PWD/notebook:/workdir \
            jupyterlab:latest \
            start.sh jupyter lab \
            --NotebookApp.token=''
