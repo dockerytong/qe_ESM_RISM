@@ -53,7 +53,7 @@ RUN pip install --upgrade pip \
 #RUN jupyter labextension install @axlair/jupyterlab_vim
 
 # copy files
-WORKDIR $HOME/notebook
+WORKDIR $HOME/work
 COPY notebook .
 
 USER root
